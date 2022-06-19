@@ -10,7 +10,7 @@ print(pattern)
 def find_word(input):
         with open('/usr/share/dict/words') as w_list:
                 for w in w_list:
-                        len(w) == 6 and re.search(pattern, w, re.IGNORECASE) and print(w)
+                        len(w.strip()) == 5 and re.search(pattern, w, re.IGNORECASE) and print(w)
 
 
 

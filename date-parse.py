@@ -1,7 +1,6 @@
 import sys
 import datetime
 f = open('./apache_access', 'rb')
-o = open('./dp_output.txt', 'wb')
 
 arg_format='%Y-%m-%d %H:%M:%S'
 start=datetime.datetime.strptime(sys.argv[1],arg_format)
@@ -17,6 +16,5 @@ def parse_dates(s, e):
                                 print(line)
 
         f.close()
-        o.close()
 
 parse_dates(start,end)
